@@ -1,0 +1,1211 @@
+{
+  "kind": "generic",
+  "value": {
+    "kind": "intersection",
+    "types": [
+      {
+        "kind": "generic",
+        "value": {
+          "kind": "object",
+          "members": [
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "appearance"
+              },
+              "value": {
+                "kind": "generic",
+                "value": {
+                  "kind": "union",
+                  "types": [
+                    {
+                      "kind": "string",
+                      "value": "circle"
+                    },
+                    {
+                      "kind": "string",
+                      "value": "square"
+                    }
+                  ],
+                  "referenceIdName": "AppearanceType"
+                }
+              },
+              "optional": false,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": " Indicates the shape of the avatar. Most avatars are circular, but square avatars\ncan be used for 'container' objects.",
+                  "raw": "* Indicates the shape of the avatar. Most avatars are circular, but square avatars\n   can be used for 'container' objects. "
+                }
+              ],
+              "default": {
+                "kind": "string",
+                "value": "circle"
+              }
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "size"
+              },
+              "value": {
+                "kind": "generic",
+                "value": {
+                  "kind": "union",
+                  "types": [
+                    {
+                      "kind": "string",
+                      "value": "xsmall"
+                    },
+                    {
+                      "kind": "string",
+                      "value": "small"
+                    },
+                    {
+                      "kind": "string",
+                      "value": "medium"
+                    },
+                    {
+                      "kind": "string",
+                      "value": "large"
+                    },
+                    {
+                      "kind": "string",
+                      "value": "xlarge"
+                    },
+                    {
+                      "kind": "string",
+                      "value": "xxlarge"
+                    }
+                  ],
+                  "referenceIdName": "SizeType"
+                }
+              },
+              "optional": false,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Defines the size of the avatar",
+                  "raw": "* Defines the size of the avatar "
+                }
+              ],
+              "default": {
+                "kind": "string",
+                "value": "medium"
+              }
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "enableTooltip"
+              },
+              "value": {
+                "kind": "boolean"
+              },
+              "optional": false,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Display a tooltip on hover",
+                  "raw": "* Display a tooltip on hover "
+                }
+              ],
+              "default": {
+                "kind": "boolean",
+                "value": true
+              }
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "borderColor"
+              },
+              "value": {
+                "kind": "union",
+                "types": [
+                  {
+                    "kind": "string"
+                  },
+                  {
+                    "parameters": [],
+                    "returnType": {
+                      "kind": "mixed"
+                    },
+                    "kind": "function"
+                  }
+                ]
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": " Used to override the default border color of the presence indicator.\nAccepts any color argument that the border-color CSS property accepts.",
+                  "raw": "* Used to override the default border color of the presence indicator.\n   Accepts any color argument that the border-color CSS property accepts. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "component"
+              },
+              "value": {
+                "kind": "generic",
+                "value": {
+                  "kind": "import",
+                  "importKind": "type",
+                  "name": "ComponentType",
+                  "moduleSpecifier": "react",
+                  "referenceIdName": "ComponentType"
+                },
+                "typeParams": {
+                  "kind": "typeParams",
+                  "params": [
+                    {
+                      "kind": "exists"
+                    }
+                  ]
+                }
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": " A custom component to use instead of the default span.\nA `className` prop is passed to the component which has classNames for all the default styles for the avatar.",
+                  "raw": "* A custom component to use instead of the default span.\n   * A `className` prop is passed to the component which has classNames for all the default styles for the avatar.\n   * "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "href"
+              },
+              "value": {
+                "kind": "string"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Provides a url for avatars being used as a link.",
+                  "raw": "* Provides a url for avatars being used as a link. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "isActive"
+              },
+              "value": {
+                "kind": "boolean"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Change the style to indicate the avatar is active.",
+                  "raw": "* Change the style to indicate the avatar is active. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "isDisabled"
+              },
+              "value": {
+                "kind": "boolean"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Change the style to indicate the avatar is disabled.",
+                  "raw": "* Change the style to indicate the avatar is disabled. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "isFocus"
+              },
+              "value": {
+                "kind": "boolean"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Change the style to indicate the avatar is focused.",
+                  "raw": "* Change the style to indicate the avatar is focused. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "isHover"
+              },
+              "value": {
+                "kind": "boolean"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Change the style to indicate the avatar is hovered.",
+                  "raw": "* Change the style to indicate the avatar is hovered. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "isSelected"
+              },
+              "value": {
+                "kind": "boolean"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Change the style to indicate the avatar is selected.",
+                  "raw": "* Change the style to indicate the avatar is selected. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "name"
+              },
+              "value": {
+                "kind": "string"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": " Name will be displayed in a tooltip, also used by screen readers as fallback\ncontent if the image fails to load.",
+                  "raw": "* Name will be displayed in a tooltip, also used by screen readers as fallback\n   content if the image fails to load. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "presence"
+              },
+              "value": {
+                "kind": "generic",
+                "value": {
+                  "kind": "union",
+                  "types": [
+                    {
+                      "kind": "union",
+                      "types": [
+                        {
+                          "kind": "string",
+                          "value": "online"
+                        },
+                        {
+                          "kind": "string",
+                          "value": "busy"
+                        },
+                        {
+                          "kind": "string",
+                          "value": "focus"
+                        },
+                        {
+                          "kind": "string",
+                          "value": "offline"
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "generic",
+                      "value": {
+                        "kind": "import",
+                        "importKind": "type",
+                        "name": "Node",
+                        "moduleSpecifier": "react",
+                        "referenceIdName": "Node"
+                      }
+                    }
+                  ],
+                  "referenceIdName": "PresenceType"
+                }
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Indicates a user's online status by showing a small icon on the avatar.\nRefer to presence values on the Presence component.\nAlternatively accepts any React element. For best results, it is recommended to\nuse square content with height and width of 100%.",
+                  "raw": "* Indicates a user's online status by showing a small icon on the avatar.\n  Refer to presence values on the Presence component.\n  Alternatively accepts any React element. For best results, it is recommended to\n  use square content with height and width of 100%. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "src"
+              },
+              "value": {
+                "kind": "string"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "A url to load an image from (this can also be a base64 encoded image).",
+                  "raw": "* A url to load an image from (this can also be a base64 encoded image). "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "status"
+              },
+              "value": {
+                "kind": "generic",
+                "value": {
+                  "kind": "union",
+                  "types": [
+                    {
+                      "kind": "union",
+                      "types": [
+                        {
+                          "kind": "string",
+                          "value": "approved"
+                        },
+                        {
+                          "kind": "string",
+                          "value": "declined"
+                        },
+                        {
+                          "kind": "string",
+                          "value": "locked"
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "generic",
+                      "value": {
+                        "kind": "import",
+                        "importKind": "type",
+                        "name": "Node",
+                        "moduleSpecifier": "react",
+                        "referenceIdName": "Node"
+                      }
+                    }
+                  ],
+                  "referenceIdName": "StatusType"
+                }
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": " Indicates contextual information by showing a small icon on the avatar.\nRefer to status values on the Status component.",
+                  "raw": "* Indicates contextual information by showing a small icon on the avatar.\n   Refer to status values on the Status component. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "stackIndex"
+              },
+              "value": {
+                "kind": "number"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "The index of where this avatar is in the group `stack`.",
+                  "raw": "* The index of where this avatar is in the group `stack`. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "tabIndex"
+              },
+              "value": {
+                "kind": "number"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Assign specific tabIndex order to the underlying node.",
+                  "raw": "* Assign specific tabIndex order to the underlying node. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "target"
+              },
+              "value": {
+                "kind": "union",
+                "types": [
+                  {
+                    "kind": "string",
+                    "value": "_blank"
+                  },
+                  {
+                    "kind": "string",
+                    "value": "_self"
+                  },
+                  {
+                    "kind": "string",
+                    "value": "_top"
+                  },
+                  {
+                    "kind": "string",
+                    "value": "_parent"
+                  }
+                ]
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "Pass target down to the anchor, if href is provided.",
+                  "raw": "* Pass target down to the anchor, if href is provided. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "createAnalyticsEvent"
+              },
+              "value": {
+                "kind": "any"
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": " You should not be accessing this prop under any circumstances. It is\nprovided by @atlaskit/analytics-next.",
+                  "raw": "* You should not be accessing this prop under any circumstances. It is\n   provided by @atlaskit/analytics-next. "
+                }
+              ]
+            },
+            {
+              "kind": "property",
+              "key": {
+                "kind": "id",
+                "name": "theme"
+              },
+              "value": {
+                "kind": "generic",
+                "value": {
+                  "parameters": [
+                    {
+                      "kind": "param",
+                      "value": {
+                        "parameters": [
+                          {
+                            "kind": "param",
+                            "value": {
+                              "kind": "generic",
+                              "value": {
+                                "kind": "typeParamsDeclaration",
+                                "params": [
+                                  {
+                                    "kind": "typeParam",
+                                    "name": "ThemeTokens"
+                                  },
+                                  {
+                                    "kind": "typeParam",
+                                    "name": "ThemeProps"
+                                  }
+                                ],
+                                "referenceIdName": "ThemeProps"
+                              }
+                            },
+                            "type": null
+                          }
+                        ],
+                        "returnType": {
+                          "kind": "generic",
+                          "value": {
+                            "kind": "typeParamsDeclaration",
+                            "params": [
+                              {
+                                "kind": "typeParam",
+                                "name": "ThemeTokens"
+                              },
+                              {
+                                "kind": "typeParam",
+                                "name": "ThemeProps"
+                              }
+                            ],
+                            "referenceIdName": "ThemeTokens"
+                          }
+                        },
+                        "kind": "function"
+                      },
+                      "type": null
+                    },
+                    {
+                      "kind": "param",
+                      "value": {
+                        "kind": "generic",
+                        "value": {
+                          "kind": "typeParamsDeclaration",
+                          "params": [
+                            {
+                              "kind": "typeParam",
+                              "name": "ThemeTokens"
+                            },
+                            {
+                              "kind": "typeParam",
+                              "name": "ThemeProps"
+                            }
+                          ],
+                          "referenceIdName": "ThemeProps"
+                        }
+                      },
+                      "type": null
+                    }
+                  ],
+                  "returnType": {
+                    "kind": "generic",
+                    "value": {
+                      "kind": "typeParamsDeclaration",
+                      "params": [
+                        {
+                          "kind": "typeParam",
+                          "name": "ThemeTokens"
+                        },
+                        {
+                          "kind": "typeParam",
+                          "name": "ThemeProps"
+                        }
+                      ],
+                      "referenceIdName": "ThemeTokens"
+                    }
+                  },
+                  "kind": "function",
+                  "referenceIdName": "ThemeProp"
+                },
+                "typeParams": {
+                  "kind": "typeParams",
+                  "params": [
+                    {
+                      "kind": "generic",
+                      "value": {
+                        "kind": "object",
+                        "members": [
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "backgroundColor"
+                            },
+                            "value": {
+                              "kind": "string"
+                            },
+                            "optional": false
+                          },
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "borderRadius"
+                            },
+                            "value": {
+                              "kind": "string"
+                            },
+                            "optional": false
+                          },
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "dimensions"
+                            },
+                            "value": {
+                              "kind": "generic",
+                              "value": {
+                                "kind": "object",
+                                "members": [
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "height"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": false
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "width"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": false
+                                  }
+                                ],
+                                "referenceIdName": "Dimensions"
+                              }
+                            },
+                            "optional": false
+                          },
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "presence"
+                            },
+                            "value": {
+                              "kind": "generic",
+                              "value": {
+                                "kind": "object",
+                                "members": [
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "bottom"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": true,
+                                    "leadingComments": [
+                                      {
+                                        "type": "commentLine",
+                                        "value": "We have to specify all corners as optional because either bottom or top",
+                                        "raw": " We have to specify all corners as optional because either bottom or top"
+                                      },
+                                      {
+                                        "type": "commentLine",
+                                        "value": "and left or right could be specified.",
+                                        "raw": " and left or right could be specified."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "left"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": true
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "right"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": true
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "top"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": true
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "height"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": false,
+                                    "leadingComments": [
+                                      {
+                                        "type": "commentLine",
+                                        "value": "Must be specified every time.",
+                                        "raw": " Must be specified every time."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "width"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": false
+                                  }
+                                ],
+                                "referenceIdName": "Layout"
+                              }
+                            },
+                            "optional": false
+                          },
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "status"
+                            },
+                            "value": {
+                              "kind": "generic",
+                              "value": {
+                                "kind": "object",
+                                "members": [
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "bottom"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": true,
+                                    "leadingComments": [
+                                      {
+                                        "type": "commentLine",
+                                        "value": "We have to specify all corners as optional because either bottom or top",
+                                        "raw": " We have to specify all corners as optional because either bottom or top"
+                                      },
+                                      {
+                                        "type": "commentLine",
+                                        "value": "and left or right could be specified.",
+                                        "raw": " and left or right could be specified."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "left"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": true
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "right"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": true
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "top"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": true
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "height"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": false,
+                                    "leadingComments": [
+                                      {
+                                        "type": "commentLine",
+                                        "value": "Must be specified every time.",
+                                        "raw": " Must be specified every time."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "property",
+                                    "key": {
+                                      "kind": "id",
+                                      "name": "width"
+                                    },
+                                    "value": {
+                                      "kind": "string"
+                                    },
+                                    "optional": false
+                                  }
+                                ],
+                                "referenceIdName": "Layout"
+                              }
+                            },
+                            "optional": false
+                          }
+                        ],
+                        "referenceIdName": "ThemeTokens"
+                      }
+                    },
+                    {
+                      "kind": "generic",
+                      "value": {
+                        "kind": "object",
+                        "members": [
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "appearance"
+                            },
+                            "value": {
+                              "kind": "generic",
+                              "value": {
+                                "kind": "union",
+                                "types": [
+                                  {
+                                    "kind": "string",
+                                    "value": "circle"
+                                  },
+                                  {
+                                    "kind": "string",
+                                    "value": "square"
+                                  }
+                                ],
+                                "referenceIdName": "AppearanceType"
+                              }
+                            },
+                            "optional": true
+                          },
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "includeBorderWidth"
+                            },
+                            "value": {
+                              "kind": "boolean"
+                            },
+                            "optional": true
+                          },
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "isLoading"
+                            },
+                            "value": {
+                              "kind": "boolean"
+                            },
+                            "optional": true
+                          },
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "presence"
+                            },
+                            "value": {
+                              "kind": "generic",
+                              "value": {
+                                "kind": "union",
+                                "types": [
+                                  {
+                                    "kind": "union",
+                                    "types": [
+                                      {
+                                        "kind": "string",
+                                        "value": "online"
+                                      },
+                                      {
+                                        "kind": "string",
+                                        "value": "busy"
+                                      },
+                                      {
+                                        "kind": "string",
+                                        "value": "focus"
+                                      },
+                                      {
+                                        "kind": "string",
+                                        "value": "offline"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "generic",
+                                    "value": {
+                                      "kind": "import",
+                                      "importKind": "type",
+                                      "name": "Node",
+                                      "moduleSpecifier": "react",
+                                      "referenceIdName": "Node"
+                                    }
+                                  }
+                                ],
+                                "referenceIdName": "PresenceType"
+                              }
+                            },
+                            "optional": true
+                          },
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "size"
+                            },
+                            "value": {
+                              "kind": "generic",
+                              "value": {
+                                "kind": "union",
+                                "types": [
+                                  {
+                                    "kind": "string",
+                                    "value": "xsmall"
+                                  },
+                                  {
+                                    "kind": "string",
+                                    "value": "small"
+                                  },
+                                  {
+                                    "kind": "string",
+                                    "value": "medium"
+                                  },
+                                  {
+                                    "kind": "string",
+                                    "value": "large"
+                                  },
+                                  {
+                                    "kind": "string",
+                                    "value": "xlarge"
+                                  },
+                                  {
+                                    "kind": "string",
+                                    "value": "xxlarge"
+                                  }
+                                ],
+                                "referenceIdName": "SizeType"
+                              }
+                            },
+                            "optional": true
+                          },
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "mode"
+                            },
+                            "value": {
+                              "kind": "generic",
+                              "value": {
+                                "kind": "union",
+                                "types": [
+                                  {
+                                    "kind": "string",
+                                    "value": "dark"
+                                  },
+                                  {
+                                    "kind": "string",
+                                    "value": "light"
+                                  }
+                                ],
+                                "referenceIdName": "ThemeMode"
+                              }
+                            },
+                            "optional": true
+                          }
+                        ],
+                        "referenceIdName": "ThemeProps"
+                      }
+                    }
+                  ]
+                }
+              },
+              "optional": true,
+              "leadingComments": [
+                {
+                  "type": "commentBlock",
+                  "value": "The theme that should be applied to the avatar.",
+                  "raw": "* The theme that should be applied to the avatar. "
+                }
+              ]
+            }
+          ],
+          "referenceIdName": "AvatarPropTypesBase"
+        }
+      },
+      {
+        "kind": "object",
+        "members": [
+          {
+            "kind": "property",
+            "key": {
+              "kind": "id",
+              "name": "onClick"
+            },
+            "value": {
+              "kind": "generic",
+              "value": {
+                "parameters": [
+                  {
+                    "kind": "param",
+                    "value": {
+                      "kind": "nullable",
+                      "arguments": {
+                        "kind": "object",
+                        "members": [
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "event"
+                            },
+                            "value": {
+                              "kind": "union",
+                              "types": [
+                                {
+                                  "kind": "generic",
+                                  "value": {
+                                    "kind": "id",
+                                    "name": "KeyboardEvent"
+                                  }
+                                },
+                                {
+                                  "kind": "generic",
+                                  "value": {
+                                    "kind": "id",
+                                    "name": "MouseEvent"
+                                  }
+                                }
+                              ]
+                            },
+                            "optional": true
+                          },
+                          {
+                            "kind": "property",
+                            "key": {
+                              "kind": "id",
+                              "name": "item"
+                            },
+                            "value": {
+                              "kind": "generic",
+                              "value": {
+                                "kind": "id",
+                                "name": "Object"
+                              }
+                            },
+                            "optional": false
+                          }
+                        ]
+                      }
+                    },
+                    "type": null
+                  },
+                  {
+                    "kind": "param",
+                    "value": {
+                      "kind": "nullable",
+                      "arguments": {
+                        "kind": "generic",
+                        "value": {
+                          "kind": "export",
+                          "exports": [
+                            {
+                              "kind": "exportSpecifier",
+                              "local": {
+                                "kind": "id",
+                                "name": "AnalyticsEventInterface"
+                              },
+                              "exported": {
+                                "kind": "id",
+                                "name": "AnalyticsEventInterface"
+                              }
+                            }
+                          ],
+                          "source": {
+                            "kind": "string",
+                            "value": "./types"
+                          },
+                          "referenceIdName": "AnalyticsEventInterface"
+                        }
+                      }
+                    },
+                    "type": null
+                  }
+                ],
+                "returnType": {
+                  "kind": "void"
+                },
+                "kind": "function",
+                "referenceIdName": "AvatarClickType"
+              }
+            },
+            "optional": true,
+            "leadingComments": [
+              {
+                "type": "commentBlock",
+                "value": "Handler to be called on click.",
+                "raw": "* Handler to be called on click. "
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "referenceIdName": "AvatarPropTypes"
+  },
+  "name": {
+    "kind": "id",
+    "name": "Avatar",
+    "type": null
+  }
+}

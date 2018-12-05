@@ -1,0 +1,20 @@
+{
+  "name": "atlaskit-to-framerX",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ajaymathur/atlaskit-to-framerX.git",
+  "author": "Ajay Narain Mathur <amathur@atlassian.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/generator": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.0",
+    "@babel/plugin-transform-classes": "^7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.2.0",
+    "@babel/plugin-transform-typescript": "^7.2.0",
+    "@babel/template": "^7.1.2",
+    "@babel/types": "^7.2.0",
+    "bolt": "^0.22.5",
+    "extract-react-types": "^0.14.7",
+    "kind2string": "^0.5.1"
+  }
+}
