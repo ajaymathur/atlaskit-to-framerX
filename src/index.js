@@ -74,32 +74,33 @@ async function run() {
   const ast = tm({
     IMPORT_NAME: t.identifier("Button"),
     SOURCE: t.stringLiteral("@atlaskit/button"),
-    PROPS: t.objectTypeAnnotation(
-      Object.keys(propsObject).map(propName =>
+    PROPS: t.interfaceDeclaration(
+      t.identifier("props"),
+      null,
+      [],
+      t.objectTypeAnnotation([
         t.objectTypeProperty(
-          t.stringLiteral(propName),
+          t.stringLiteral("appearence"),
           t.unionTypeAnnotation([
             t.stringLiteralTypeAnnotation("circle"),
             t.stringLiteralTypeAnnotation("square")
           ])
         )
-      )
+      ])
     )
-  });
+    //DEFAULT_PROPS: t.objectExpression(propsObject.map(props => ))
 
+    // t.classProperty(
+    //   t.identifier("defaultProps"),
+    //   t.objectExpression([
+    //     t.objectProperty(t.identifier("name"), t.stringLiteral("nam1"))
+    //   ])
+    // )
+  });
+  //console.log(ast);
+
+  fs.writeFileSync("ttttt.js", JSON.stringify(ast, null, 2));
   console.log(generate(ast, { sourceType: "module" }).code);
 }
 
-// Object.keys(propsObject).map(propName =>
-//   t.objectProperty(
-//     t.stringLiteral(propName),
-//     t.stringLiteral(propsObject[propName].value)
-//   )
-// )
 run().then(() => {});
-
-// componentProperties.map(componentProperty => {
-//   let value = Object.keys(componentProperty);
-//   t.objectProperty(t.stringLiteral(componentProperty))
-// }
-// )[t.objectProperty(t.stringLiteral("hello"), t.stringLiteral("hello"))]
